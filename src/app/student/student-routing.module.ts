@@ -7,11 +7,11 @@ import { StudenteditComponent } from './studentedit/studentedit.component';
 const routes: Routes = [
   {
     path: '',
-    component: StudentlistComponent
-  },
-  {
+    component: StudentlistComponent,
+    children: [{
     path: 'edit',
     component: StudenteditComponent
+  }]
   }
 ];
 
