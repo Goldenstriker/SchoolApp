@@ -7,9 +7,8 @@ import { CardComponent } from '../card/card.component';
 @NgModule({
   imports: [
     CommonModule,
-    StudentRoutingModule,
-    CardComponent
+    StudentRoutingModule
   ],
-  declarations: [StudentlistComponent, StudenteditComponent]
+  declarations: [StudentlistComponent, StudenteditComponent,CardComponent]
 })
 export class StudentModule { }
