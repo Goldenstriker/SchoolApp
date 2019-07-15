@@ -22,6 +22,7 @@ export class StudentlistComponent implements OnInit {
   ngOnInit() {
     this.getStudents();
   }
+  isDataAvailable:boolean=true;
   getStudents() {
     this.studentService.get_students().subscribe((res) => this.students = res);
   }
