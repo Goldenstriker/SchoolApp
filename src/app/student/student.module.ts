@@ -5,10 +5,11 @@ import {StudentRoutingModule} from './student-routing.module';
 import { StudenteditComponent } from './studentedit/studentedit.component';
 import { CardComponent } from '../card/card.component';
 import { StudentService } from './student.service';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
-    StudentRoutingModule
+    StudentRoutingModule,HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
   providers: [StudentService]
