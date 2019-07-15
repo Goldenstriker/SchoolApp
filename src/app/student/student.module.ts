@@ -9,7 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
-    StudentRoutingModule,HttpClientModule
+    StudentRoutingModule,
+    HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
   providers: [StudentService]
