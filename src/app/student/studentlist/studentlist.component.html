@@ -7,7 +7,7 @@
   <p>This is another text.</p> 
   <div class="row">
     <div class="col-md-6">
-      <app-card [first_name]="ABC" [last_name]="DEF" [email]="Agmail.com" ></app-card>
+      <app-card *ngFor ="let student of students" [first_name]="student.first_name" [last_name]="student.last_name" [email]="student.email"></app-card>
       <router-outlet></router-outlet>
     </div>
     <div class="col-md-6">
