@@ -11,10 +11,10 @@ import { Observable, of } from 'rxjs';
 export class StudentlistComponent implements OnInit {
   
   students: Student[];
-  delete(emp: Student): void {
+  delete(student: Student): void {
     //this.employees.splice(this.employees.indexOf(emp), 1);
-    this.studentService.delete_student(emp.id).subscribe((res)=>{  
-        let index = this.students.indexOf(emp);  
+    this.studentService.delete_student(student.id).subscribe((res)=>{  
+        let index = this.students.indexOf(student);  
         this.students.splice(index, 1);  
       });  
   }
