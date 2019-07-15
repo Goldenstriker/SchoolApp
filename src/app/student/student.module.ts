@@ -13,7 +13,6 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
-  providers: [StudentService],
-  exports:[CardComponent]
+  providers: [StudentService]
 })
 export class StudentModule { }
