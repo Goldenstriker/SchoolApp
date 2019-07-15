@@ -24,7 +24,7 @@ export class StudentlistComponent implements OnInit {
   }
   isDataAvailable:boolean=true;
   getStudents() {
-    this.studentService.get_students().subscribe((res) => this.students = res);
+    this.studentService.get_students().subscribe((res) => {this.students = res; console.log(res);});
   }
 
 }
