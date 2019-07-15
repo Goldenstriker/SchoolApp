@@ -6,7 +6,7 @@
   <p>This is some text.</p>      
   <p>This is another text.</p> 
   
-<div *ngIf="isDataAvailable" class="spinner-border text-primary" role="status">
+<div *ngIf="students.Count()==0" class="spinner-border text-primary" role="status">
   <span class="sr-only">Loading...</span>
 </div>
 <app-card *ngFor ="let student of students" [first_name]="student.first_name" [last_name]="student.last_name" [email]="student.email">
