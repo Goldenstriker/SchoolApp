@@ -23,7 +23,7 @@ export class StudentlistComponent implements OnInit {
     this.getStudents();
   }
   getStudents() {
-    this.studentService.get_students().subscribe((res) => { setTimeout(function(){this.students = res;},10000); });
+    this.studentService.get_students().subscribe((res) => { setTimeout(function(){this.students = res;},1000); });
   }
 
 }
