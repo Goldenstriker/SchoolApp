@@ -4,11 +4,13 @@ import { StudentlistComponent } from './studentlist/studentlist.component';
 import {StudentRoutingModule} from './student-routing.module';
 import { StudenteditComponent } from './studentedit/studentedit.component';
 import { CardComponent } from '../card/card.component';
+import { StudentService } from './student.service';
 @NgModule({
   imports: [
     CommonModule,
     StudentRoutingModule
   ],
-  declarations: [StudentlistComponent, StudenteditComponent,CardComponent]
+  declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
+  providers: [StudentService]
 })
 export class StudentModule { }
