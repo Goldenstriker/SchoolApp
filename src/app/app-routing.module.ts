@@ -5,8 +5,7 @@ import {AuthenticationGuard} from './authentication.guard';
 const routes: Routes = [
   {
     path: 'student',
-    loadChildren: 'app/student/student.module#StudentModule',
-    canActivate: [AuthenticationGuard]
+    loadChildren: 'app/student/student.module#StudentModule'
   },
   {
     path: 'teacher',
@@ -15,7 +14,8 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    canActivate: [AuthenticationGuard]
   }
 ];
 
