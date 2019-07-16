@@ -10,6 +10,6 @@ export class AuthenticationGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       this.router.navigate(["/teacher"], { queryParams: { returnUrl: state.url }});
-      return false;
+      return true;
   }
 }
