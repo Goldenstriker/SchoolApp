@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { StudentService } from '../student.service';
-import { Observable, of } from 'rxjs';
+import { Observable, of,Subject } from 'rxjs';
+import { LoadingserviceService } from '../../LoadingService/loadingservice.service';
 
 @Component({
   selector: 'app-studentlist',
@@ -11,6 +12,7 @@ import { Observable, of } from 'rxjs';
 export class StudentlistComponent implements OnInit {
   
   students: Student[];
+  isLoading: Subject<boolean> = this.loadingserviceService.isLoading;
   delete(student: Student): void {
     //this.employees.splice(this.employees.indexOf(emp), 1);
     this.studentService.delete_student(student.id).subscribe((res)=>{  
@@ -18,7 +20,7 @@ export class StudentlistComponent implements OnInit {
         this.students.splice(index, 1);  
       });  
   }
-  constructor(public studentService: StudentService) { }
+  constructor(public studentService: StudentService,private loadingserviceService:LoadingserviceService) { }
   ngOnInit() {
     this.getStudents();
   }
