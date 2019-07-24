@@ -12,7 +12,6 @@ import { LoadingserviceService } from '../../LoadingService/loadingservice.servi
 export class StudentlistComponent implements OnInit {
   
   students: Student[];
-  isLoading: Subject<boolean>;
   delete(student: Student): void {
     //this.employees.splice(this.employees.indexOf(emp), 1);
     this.studentService.delete_student(student.id).subscribe((res)=>{  
@@ -26,7 +25,6 @@ export class StudentlistComponent implements OnInit {
   }
   getStudents() {
     this.studentService.get_students().subscribe((res) => { this.students = res;});
-    this.isLoading= this.loadingserviceService.isLoading;
   }
 
 }
