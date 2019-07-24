@@ -25,8 +25,8 @@ export class StudentlistComponent implements OnInit {
     this.getStudents();
   }
   getStudents() {
-    this.studentService.get_students().subscribe((res) => { this.students = res;  this.isLoading= this.loadingserviceService.isLoading; });
-
+    this.studentService.get_students().subscribe((res) => { this.students = res;});
+    this.isLoading= this.loadingserviceService.isLoading;
   }
 
 }
