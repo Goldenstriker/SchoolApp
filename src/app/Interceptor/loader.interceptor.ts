@@ -13,7 +13,7 @@ export class LoaderInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         this.loaderService.show();
         return next.handle(req).pipe(
-            finalize(() => { setTimeout(function(){this.loaderService.hide();console.log("it working");},1000)})
+            finalize(() => { this.loaderService.hide();console.log("it working");})
         );
     }
 
