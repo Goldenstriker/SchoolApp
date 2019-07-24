@@ -6,7 +6,7 @@
   <p>This is some text.</p>      
   <p>This is another text.</p> 
   
-<div *ngIf="isLoading" class="spinner-border text-primary" align="center" role="status">
+<div *ngIf="isLoading | async" class="spinner-border text-primary" align="center" role="status">
   <span class="sr-only">Loading...</span>
 </div>
 <app-card *ngFor ="let student of students" [first_name]="student.first_name" [last_name]="student.last_name" [email]="student.email">
