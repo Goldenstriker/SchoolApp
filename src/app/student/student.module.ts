@@ -6,6 +6,9 @@ import { StudenteditComponent } from './studentedit/studentedit.component';
 import { CardComponent } from '../card/card.component';
 import { StudentService } from './student.service';
 import {HttpClientModule} from '@angular/common/http';
+import { LoadingserviceService } from '../LoadingService/loadingservice.service';
+import { LoaderInterceptor } from '../Interceptor/loader.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
@@ -13,6 +16,6 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
-  providers: [StudentService]
+  providers: [StudentService,LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]
 })
 export class StudentModule { }
