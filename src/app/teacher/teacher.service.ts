@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-
+import {Teacher} from './teacher.service';
 @Injectable()
 export class TeacherService {
 
   constructor(private httpClient:HttpClient) { }
-  baseURL: string = "https://demodjango--goldenstriker.repl.co/fake/";
-  get_students() {
-    return this.httpClient.get<Student[]>(this.baseURL + '/student');
+  baseURL: string = "https://my-json-server.typicode.com/Goldenstriker/schoolappdb/";
+  get_teacher() {
+    return this.httpClient.get<Teacher[]>(this.baseURL+ '/teacher/');
   }
-  get_student(id: number) {
-    return this.httpClient.get<Student>(this.baseURL + '/student/' + id);
+  get_teacher(id: number) {
+    return this.httpClient.get<Teacher>(this.baseURL + '/teacher/' + id);
   }
-  delete_student(id: number) {
-    return this.httpClient.delete(this.baseURL + '/student/' + id);
+  delete_teacher(id: number) {
+    return this.httpClient.delete(this.baseURL + '/teacher/' + id);
   }
 }
