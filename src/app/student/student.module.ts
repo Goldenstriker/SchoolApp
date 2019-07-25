@@ -7,8 +7,6 @@ import { CardComponent } from '../card/card.component';
 import { StudentService } from './student.service';
 import {HttpClientModule} from '@angular/common/http';
 import { LoadingserviceService } from '../LoadingService/loadingservice.service';
-import { LoaderInterceptor } from '../Interceptor/loader.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
