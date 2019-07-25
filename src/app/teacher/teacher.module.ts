@@ -9,7 +9,7 @@ import { CardComponent } from '../card/card.component';
     CommonModule,
     TeacherRoutingModule
   ],
-  declarations: [TeacherlistComponent,CardComponent],
+  declarations: [TeacherlistComponent],
   providers: [TeacherService]
 })
 export class TeacherModule { }
