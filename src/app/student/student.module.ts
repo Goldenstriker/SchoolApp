@@ -14,6 +14,6 @@ import { LoadingserviceService } from '../LoadingService/loadingservice.service'
     HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
-  providers: [StudentService,LoadingserviceService]
+  providers: [StudentService,LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]
 })
 export class StudentModule { }
