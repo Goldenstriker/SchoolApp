@@ -14,6 +14,7 @@ import {CardComponent} from './card/card.component';
   imports:      [ BrowserModule, FormsModule ,AppRoutingModule,StudentModule,TeacherModule],
   declarations: [ AppComponent,CardComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]
+  providers: [LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
+  exports:[CardComponent]
 })
 export class AppModule { }
