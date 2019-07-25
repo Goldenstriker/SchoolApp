@@ -8,10 +8,11 @@ import { LoadingserviceService } from './LoadingService/loadingservice.service';
 import { LoaderInterceptor } from './Interceptor/loader.interceptor';
 import {StudentModule} from './student/student.module';
 import {TeacherModule} from './teacher/teacher.module';
+import {CardComponent} from './card/card.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ,AppRoutingModule,StudentModule,TeacherModule],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent,CardComponent ],
   bootstrap:    [ AppComponent ],
   providers: [LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]
 })
