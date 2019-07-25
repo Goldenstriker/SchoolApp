@@ -16,6 +16,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent,CardComponent],
-  providers: [StudentService]
+  providers: [StudentService,LoadingserviceService]
 })
 export class StudentModule { }
