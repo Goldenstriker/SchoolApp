@@ -1,11 +1,10 @@
 <div class="container-fluid">
-  <h1>Responsive Columns</h1>
-  <p>Resize the browser window to see the effect.</p>
-  <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
-  <div class="row">
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-  </div>
+	<h1>Responsive Columns</h1>
+	<p>Resize the browser window to see the effect.</p>
+	<p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
+	<div *ngIf="loadingserviceService.isLoading" class="spinner-border text-primary" style="margin: 0 50%;" role="status">
+		<span class="sr-only">Loading...</span>
+</div>
+<app-card *ngFor ="let student of students" [first_name]="student.first_name" [last_name]="student.last_name" [email]="student.email">
+</app-card>
 </div>
