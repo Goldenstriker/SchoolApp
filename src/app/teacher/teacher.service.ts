@@ -7,7 +7,7 @@ export class TeacherService {
   constructor(private httpClient:HttpClient) { }
   baseURL: string = "https://my-json-server.typicode.com/Goldenstriker/schoolappdb/";
   get_teachers() {
-    return this.httpClient.get<Teacher[]>(this.baseURL+ '/teacher/');
+    return this.httpClient.get<Teacher[]>(this.baseURL+ '/teacher');
   }
   get_teacher(id: number) {
     return this.httpClient.get<Teacher>(this.baseURL + '/teacher/' + id);
