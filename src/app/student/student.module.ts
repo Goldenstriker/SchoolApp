@@ -7,11 +7,13 @@ import { StudentService } from './student.service';
 import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
 import { LoadingserviceService } from '../LoadingService/loadingservice.service';
 import { LoaderInterceptor } from '../Interceptor/loader.interceptor';
+import {SharedModule} from '../shared/shared.module';
 @NgModule({
   imports: [
     CommonModule,
     StudentRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   declarations: [StudentlistComponent, StudenteditComponent],
   providers: [StudentService,LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]

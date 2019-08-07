@@ -8,13 +8,12 @@ import { LoadingserviceService } from './LoadingService/loadingservice.service';
 import { LoaderInterceptor } from './Interceptor/loader.interceptor';
 import {StudentModule} from './student/student.module';
 import {TeacherModule} from './teacher/teacher.module';
-import {CardComponent} from './card/card.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ,AppRoutingModule,StudentModule,TeacherModule],
-  declarations: [ AppComponent,CardComponent ],
+  imports:      [ BrowserModule, FormsModule ,AppRoutingModule,StudentModule,TeacherModule,SharedModule],
+  declarations: [ AppComponent],
   bootstrap:    [ AppComponent ],
-  providers: [LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
-  exports:[CardComponent]
+  providers: [LoadingserviceService,{ provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }]
 })
 export class AppModule { }
